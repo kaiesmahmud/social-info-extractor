@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 300px;
+    padding: 16px;
+    background-color: #f0f0f0;
+  }
+  
+  h3 {
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  #extracted-data > div {
+    margin-bottom: 15px;
+  }
+
+  .flex{
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flex-col{
+    display: flex ;
+    flex-direction: column;
+    gap: 5px;
+    padding-bottom: 5px;
+  }
+  .social_title{
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  .thin{
+    font-weight: 500;
+  }
