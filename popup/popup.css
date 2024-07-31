@@ -25,13 +25,15 @@ body {
 }
 
 h1 {
-  font-size: 18px; /* Adjust the font size as needed */
-  color: #ffffff;
-  /* text-decoration: underline; */
+  font-size: 18px; 
+  color: #ffffff; 
   margin-bottom: 20px;
   animation: fadeIn 1s ease-in-out;
   font-family: 'Prompt', sans-serif; /* Changed font-family */
-  background: goldenrod;
+  /* background: goldenrod; */
+  background-color: #0cbaba;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+
   padding: 10px 20px;
   border-radius: 8px;
   /* border: 1px solid #0042CE; */
@@ -93,3 +95,21 @@ h1 {
   .url-info{
 
   }
+
+/* For Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+  border-radius: 2px;
+}
+
+button{
+  user-select: none;
+}
