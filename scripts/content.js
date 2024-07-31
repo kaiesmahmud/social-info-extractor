@@ -94,12 +94,39 @@ function extractInfo() {
   }, []);
 // Remove duplicate emails and phones using a Set
   const uniqueEmails = [...new Set(allEmails)]; 
-  const uniquePhones = [...new Set(phones)];
+  // const uniquePhones = [...new Set(phones)];
+  const uniquePhones = uniquePhoneNumbers(phones);
 
   return { emails: uniqueEmails, phones: uniquePhones, socials: filteredSocials };
 }
 
  
+function uniquePhoneNumbers(phoneArray) {
+  console.log("Original phone array:", phoneArray);
 
+  // Create a map to store unique numbers
+  const uniqueMap = new Map();
+
+  phoneArray.forEach(phone => {
+    // Remove +, space, (, and ) from the number
+    const cleanNumber = phone.replace(/[\+\s\(\)-]/g, '');
+    
+    console.log(`Original: ${phone}, Cleaned: ${cleanNumber}`);
+
+    // If this clean number isn't in our map yet, add it
+    if (!uniqueMap.has(cleanNumber)) {
+      uniqueMap.set(cleanNumber, phone);
+    }
+  });
+
+  console.log("Unique map:", uniqueMap);
+
+  // Convert the map values back to an array
+  const result = Array.from(uniqueMap.values());
+  
+  console.log("Final unique phone numbers:", result);
+
+  return result;
+}
 //twitter.com/intent
 // facebook.com/sharer
