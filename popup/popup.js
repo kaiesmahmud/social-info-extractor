@@ -1,18 +1,3 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//     chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
-//         showLoading();
-//         chrome.tabs.sendMessage(tabs[0].id, {action: "extract"}, (response) => {
-//           if (chrome.runtime.lastError) {
-//             console.error(chrome.runtime.lastError);
-//             displayError("An error occurred while extracting data.");
-//           } else {
-//             displayData(response);
-//           }
-//         });
-//       });
-//   });
-  
-//===========2nd =============
 document.addEventListener('DOMContentLoaded', () => {
     showLoading();
     chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
@@ -33,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('extracted-data');
     
     const urlInfo = document.createElement('div');
-    urlInfo.classList.add('url-info');
+    urlInfo.classList.add('url-info','py-5');
     
     const currentUrlDiv = document.createElement('div');
     currentUrlDiv.textContent = `Current URL: ${response.currentUrl}`;
@@ -51,9 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     container.appendChild(urlInfo);
   }
   
-
-
-
+ 
   function displayData(data) {
       const container = document.getElementById('extracted-data');
       container.innerHTML = "";
