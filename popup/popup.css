@@ -1,9 +1,41 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Trirong:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    width: 300px;
+    font-family: 'Roboto', sans-serif; /* Changed font-family */
+    margin: 0;
+    width: 350px;
     padding: 16px;
-    background-color: #f0f0f0;
-  }
+    /* background: linear-gradient(to right, #ffffff, #ffffff); */
+    background-color: #f9fcff;
+    background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
+
+    animation: gradientBackground 15s ease infinite;
+}
+
+
+
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1 {
+  font-size: 18px; /* Adjust the font size as needed */
+  color: #ffffff;
+  /* text-decoration: underline; */
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+  font-family: 'Prompt', sans-serif; /* Changed font-family */
+  background: goldenrod;
+  padding: 10px 20px;
+  border-radius: 8px;
+  /* border: 1px solid #0042CE; */
+}
   
   h3 {
     color: #333;
@@ -33,6 +65,7 @@ body {
     display: flex ;
     justify-content: space-between;
     align-items: center;
+    gap: 3px;
   }
   .flex-col{
     display: flex ;
@@ -46,4 +79,17 @@ body {
   }
   .thin{
     font-weight: 500;
+  }
+  .small {
+    font-size: 12px;
+    font-weight: 400 ;
+    font-style: italic;
+    color: #333;
+  }
+  .py-5{
+    padding-top: 5px ;
+    padding-bottom: 5px ;
+  }
+  .url-info{
+
   }
